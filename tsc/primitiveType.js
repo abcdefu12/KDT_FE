@@ -1,4 +1,5 @@
 "use strict";
+//node primitiveType.js
 // console.log('hello');
 //type Annotation
 let a;
