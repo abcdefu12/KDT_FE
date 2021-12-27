@@ -62,5 +62,23 @@ $color: royalblue;
 // 가져오기
 
 // 데이터 종류
+// js와 유사
+// $number $string $color $boolean $null $list $map 
+
 // 반복문 @each
+$list: orange, royalblue, yellow;
+@each $c in $list{
+    .box{
+        color: $c;
+    }
+}
+$map: ( o:orange, r:royalblue, y:yellow);
+@each $k, $v in $map{
+    .box-#{$k} {
+        color: $v;
+    }
+}
+
 // 재활용 @content
+// @content위치에 {}내용을 추가
+// BootStrap을 해석하는데 사용 (실무보다)
