@@ -85,3 +85,73 @@ bclass.anna = "female";
 console.log(bclass);
 
 
+
+//Singletons Pattern
+class ClassName {
+    private static instance: ClassName | null = null;
+    public static getInstance(): ClassName{
+        if (ClassName.instance === null) {
+            ClassName.instance = new ClassName();
+        }
+        return ClassName.instance;
+    }
+    private constructor(){}
+}
+
+// const asth = new ClassName();
+// const bsth = new ClassName();
+const asth = ClassName.getInstance();
+const bsth = ClassName.getInstance();
+console.log(asth===bsth);
+
+
+//Inheritance
+class Parent {
+    constructor(protected _name: string, private _age: number){}
+
+    public print(): void{
+        console.log(`이름은 ${this ._name} 이고, 나이는 ${this ._age} 입니다.`);
+    }
+
+    protected printName():void {
+        console.log(this ._name, this._age);
+    }
+}
+const p = new Parent("Mark", 39);
+p.print();
+
+class Child extends Parent{
+    // protected _name = "Mark Jr.";
+    // public _name = "Mark Jr";
+    public gender = 'male';
+
+    constructor(age:number){
+        super("Mark Jr.", age);
+        this.printName();
+    }
+}
+
+// new Child("Son", 5);
+// const cofp = new Child("Son", 5);
+const cofp = new Child(5);
+
+cofp.print();
+cofp.gender
+// cofp._name
+
+
+//Abstract Classes
+abstract class AbstractPerson{
+    protected _name: string = "Mark";
+
+    abstract setName(name:string): void;
+}
+// new AbstractPerson()
+
+class PersonA extends AbstractPerson{
+    setName(name: string): void {
+        this._name = name;
+    }    
+}
+const pa = new PersonA();
+// pa.setName();
