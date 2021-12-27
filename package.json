@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel scss/index.html",
-    "build": "parcel build scss/index.html"
+    "dev": "parcel scss/overwatch/index.html",
+    "build": "parcel build scss/overwatch/index.html"
   },
   "keywords": [],
   "author": "",
