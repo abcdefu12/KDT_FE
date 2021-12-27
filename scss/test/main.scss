@@ -1,0 +1,66 @@
+@import "./sub";
+// @import url("./sub.scss");과 동일하게 인식
+
+$color: royalblue;
+
+.container{
+    h1{    
+        color: $color;
+        background-color: tomato;
+    }
+}
+
+
+
+// Properties of scss
+
+// Nesting(중첩) is available.
+// Nested properties can shorten code and do not forget `:{}`
+
+// // and /**/ are both available
+// // can not be seen in css file.
+
+// sassmeister.com
+// codepen.io
+
+// & 는 상위 선택자 참조문자이다.
+
+// $ is added infront of variables of scss 
+// $ has its own range. 전역변수인지아닌지 유효범위 확인.
+
+// 산술연산 방법 동일 나누기`/`제외
+// 나누기 기호`/`는 단축속성에 사용. 잘안씀
+// i)소괄호 안에 넣어주거나
+// ii)변수로 지정하고 기호사용
+// iii)다른 연산기호와 함께 사용
+// 참고) %는 calac()함수 안에 넣어 계산
+
+// Mixins(재활용)
+// @mixin 부여하기
+// @include 가져오기
+// 인수 매개변수와 유사
+// 키워드 인수
+
+// 반복문
+// 보간
+// #{X} ${X}
+
+// 함수 @function
+// @사용해 js와 동일한 function 생성가능
+// mixin과의 차이점: 모음이 아닌 연산
+
+// 색상내장함수
+// mix(color1, color2)
+// lighten(color, % ) 명도
+// darken(color, % )
+// saturate(color, % ) 채도
+// desaturate(color, %)
+// grayscale(color)
+// invert(color)
+// rgba(color, alpha )
+
+// 가져오기
+
+// 데이터 종류
+// 반복문 @each
+// 재활용 @content
