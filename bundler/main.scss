@@ -1,0 +1,10 @@
+$color: tomato;
+$color1: yellow;
+
+body{
+    background-color: $color;
+    h1{
+        color: $color1;
+        display: flex;
+    }
+}
